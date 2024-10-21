@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Notación Polaca</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        #titulo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff; /* Color azul de Bootstrap */
+        }
+
+        h3, h2 {
+            color: #34384088; /* Color gris oscuro */
+        }
+
+        textarea {
+            background-color: #f1f3f5;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 1rem;
+            color: #495057;
+        }
+
+        textarea::placeholder {
+            color: #6c757d;
+        }
+
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
+            border-color: #80bdff; /* Borde azul al hacer focus */
+        }
+
+        .custom-btn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .custom-btn:hover {
+            background-color: #0056b3; 
+        }
+
+        .text-center {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 30px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center" id="titulo">Notación Polaca</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Convertir la notación</h3>
+                <textarea id="texto" class="form-control" rows="7" placeholder="Ingresa la notación polaca"></textarea>
+                <button class="btn custom-btn mt-3" id="guardarTexto">Convertir</button>
+            </div>
+            <div class="col-md-6">
+                <h2>Resultado de la conversión</h2>
+                <textarea id="busqueda" class="form-control" rows="3" placeholder="Aquí verás el resultado"></textarea>
+                <br>
+                <div class="text-center">
+                    <button class="btn custom-btn" id="limpiar">Limpiar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="Npolaca.js"></script>
+</body>
+</html>
